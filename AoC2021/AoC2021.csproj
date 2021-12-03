@@ -12,12 +12,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Day1\Input.txt">
+		<None Update="**\Input.txt">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 
-	<ItemGroup >
+	<ItemGroup>
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
 			<_Parameter1>AoC2021Tests</_Parameter1>
 		</AssemblyAttribute>
