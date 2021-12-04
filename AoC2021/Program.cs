@@ -1,5 +1,5 @@
 ﻿using AoC2021.Common;
-using AoC2021.Day2;
+using AoC2021.Day3;
 
 namespace AoC2021;
 
@@ -8,7 +8,8 @@ internal class Program
     public static Task Main(string[] args)
     {
         //return SolveProblem(new Day1Solver(new RawInputProvider(@"Day1\Input.txt"), new MesurementsCleaner()), 1);
-        return SolveProblem(new Day2Solver(new RawInputProvider(@"Day2\Input.txt"), new PositionCalculator()), 2);
+        //return SolveProblem(new Day2Solver(new RawInputProvider(@"Day2\Input.txt"), new PositionCalculator()), 2);
+        return SolveProblem(new Day3Solver(new RatesCalculator(new RawInputProvider(@"Day3\Input.txt"))), 3);
     }
 
     public static async Task SolveProblem(IDaySolver daySolver, int day)
