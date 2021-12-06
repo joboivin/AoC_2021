@@ -9,14 +9,14 @@ internal class Day3Solver : IDaySolver
         _ratesCalculator = ratesCalculator;
     }
 
-    public async Task<int> SolveBonusProblemAsync()
+    public async Task<long> SolveBonusProblemAsync()
     {
         var (oxygen, co2) = await _ratesCalculator.CalculateLifeSupportRatesAsync();
 
         return (Convert.ToInt32(oxygen, 2) * Convert.ToInt32(co2, 2));
     }
 
-    public async Task<int> SolveProblemAsync()
+    public async Task<long> SolveProblemAsync()
     {
         var (gamma, epsilon) = await _ratesCalculator.CalculatePowerConsumptionRatesAsync();
 

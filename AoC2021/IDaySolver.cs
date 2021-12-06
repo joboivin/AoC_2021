@@ -2,7 +2,7 @@
 
 internal interface IDaySolver
 {
-    Task<int> SolveProblemAsync();
-    Task<int> SolveBonusProblemAsync();
+    Task<long> SolveProblemAsync();
+    Task<long> SolveBonusProblemAsync();
 }
 

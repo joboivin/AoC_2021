@@ -13,17 +13,17 @@ internal class Day5Solver : IDaySolver
         _hydrothermalVentPointsProvider = hydrothermalVentPointsProvider;
     }
 
-    public Task<int> SolveBonusProblemAsync()
+    public Task<long> SolveBonusProblemAsync()
     {
         return SolveProblemAsync((line) => _hydrothermalVentPointsProvider.ProvideAllPoints(line));
     }
 
-    public Task<int> SolveProblemAsync()
+    public Task<long> SolveProblemAsync()
     {
         return SolveProblemAsync((line) => _hydrothermalVentPointsProvider.ProvidePoints(line));
     }
 
-    private async Task<int> SolveProblemAsync(Func<string, IList<(int, int)>> providePoints)
+    private async Task<long> SolveProblemAsync(Func<string, IList<(int, int)>> providePoints)
     {
         var oceanPositions = new Dictionary<(int, int), int>();
 

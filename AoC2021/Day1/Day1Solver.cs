@@ -13,14 +13,14 @@ internal class Day1Solver : IDaySolver
         _mesurementsCleaner = mesurementsCleaner;
     }
 
-    public async Task<int> SolveBonusProblemAsync()
+    public async Task<long> SolveBonusProblemAsync()
     {
         var cleanMesurements = await _mesurementsCleaner.CleanMesurementsAsync(ParseRawInput(_rawInputProvider.ProvideRawInputAsync()));
 
         return await CalculateIncrements(() => cleanMesurements.ToAsyncEnumerable());
     }
 
-    public Task<int> SolveProblemAsync()
+    public Task<long> SolveProblemAsync()
     {
         return CalculateIncrements(() => ParseRawInput(_rawInputProvider.ProvideRawInputAsync()));
     }
@@ -31,7 +31,7 @@ internal class Day1Solver : IDaySolver
             yield return int.Parse(input);
     }
 
-    private async Task<int> CalculateIncrements(Func<IAsyncEnumerable<int>> provideDepths)
+    private async Task<long> CalculateIncrements(Func<IAsyncEnumerable<int>> provideDepths)
     {
         var incrementsTotal = 0;
         int? lastDepth = null;

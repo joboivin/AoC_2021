@@ -1,5 +1,5 @@
 ﻿using AoC2021.Common;
-using AoC2021.Day5;
+using AoC2021.Day6;
 
 namespace AoC2021;
 
@@ -11,7 +11,8 @@ internal class Program
         //return SolveProblem(new Day2Solver(new RawInputProvider(@"Day2\Input.txt"), new PositionCalculator()), 2);
         //return SolveProblem(new Day3Solver(new RatesCalculator(new RawInputProvider(@"Day3\Input.txt"))), 3);
         //return SolveProblem(new Day4Solver(new BingoCreator(new RawInputProvider(@"Day4\Input.txt"))), 4);
-        return SolveProblem(new Day5Solver(new RawInputProvider(@"Day5\Input.txt"), new HydrothermalVentPointsProvider()), 5);
+        //return SolveProblem(new Day5Solver(new RawInputProvider(@"Day5\Input.txt"), new HydrothermalVentPointsProvider()), 5);
+        return SolveProblem(new Day6Solver(new LanternfishSwarmPopulationCalculator(new RawInputProvider(@"day6\Input.txt"), new LanternfishReproductionCalculator())), 6);
     }
 
     public static async Task SolveProblem(IDaySolver daySolver, int day)

@@ -9,7 +9,7 @@ internal class Day4Solver : IDaySolver
         _bingoCreator = bingoCreator;
     }
 
-    public async Task<int> SolveBonusProblemAsync()
+    public async Task<long> SolveBonusProblemAsync()
     {
         var (bingoBoards, numbersToBeDrawed) = await _bingoCreator.CreateBingoBoardsAsync();
         var winnerBoardsCount = 0;
@@ -35,7 +35,7 @@ internal class Day4Solver : IDaySolver
         throw new Exception("At least 1 board never wins");
     }
 
-    public async Task<int> SolveProblemAsync()
+    public async Task<long> SolveProblemAsync()
     {
         var (bingoBoards, numbersToBeDrawed) = await _bingoCreator.CreateBingoBoardsAsync();
 

@@ -13,14 +13,14 @@ internal class Day2Solver : IDaySolver
         _positionCalculator = positionCalculator;
     }
 
-    public async Task<int> SolveBonusProblemAsync()
+    public async Task<long> SolveBonusProblemAsync()
     {
         var position = await _positionCalculator.CalculateAdvancedPositionAsync(_rawInputProvider.ProvideRawInputAsync());
 
         return position.horizontal * position.vertical;
     }
 
-    public async Task<int> SolveProblemAsync()
+    public async Task<long> SolveProblemAsync()
     {
         var position = await _positionCalculator.CalculateBasicPositionAsync(_rawInputProvider.ProvideRawInputAsync());
 
