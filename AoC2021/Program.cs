@@ -1,5 +1,5 @@
 ﻿using AoC2021.Common;
-using AoC2021.Day10;
+using AoC2021.Day11;
 
 namespace AoC2021;
 
@@ -16,7 +16,8 @@ internal class Program
         //return SolveProblemAsync(new Day7Solver(new RawInputProvider(@"Day7\Input.txt")), 7);
         //return SolveProblemAsync(new Day8Solver(new RawInputProvider(@"Day8\Input.txt"), new DigitValuesFinder()), 8);
         //return SolveProblemAsync(new Day9Solver(new HeightmapProvider(new RawInputProvider(@"Day9\Input.txt"))), 9);
-        return SolveProblemAsync(new Day10Solver(new RawInputProvider(@"Day10\Input.txt"), new LineAnalyser()), 10);
+        //return SolveProblemAsync(new Day10Solver(new RawInputProvider(@"Day10\Input.txt"), new LineAnalyser()), 10);
+        return SolveProblemAsync(new Day11Solver(new OctopusSimulator(new OctopusGridProvider(new RawInputProvider(@"Day11\Input.txt")))), 11);
     }
 
     public static async Task SolveProblemAsync(IDaySolver daySolver, int day)
